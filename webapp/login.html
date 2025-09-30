@@ -16,10 +16,8 @@
             const user = document.getElementById('username').value;
             const pass = document.getElementById('password').value;
             if (user === 'admin' && pass === 'password123') {
-                // Point to the dashboard file in the same directory
                 window.location.href = 'dashboard.html';
             } else {
-                // Intentional bug: 'credentails' is misspelled
                 document.getElementById('error-message').textContent = 'Invalid credentails';
             }
         }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="error-message" style="color:red;"></p>
+
+    <script>
+        function login() {
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+            if (user === 'admin' && pass === 'password123') {
+                // Point to the dashboard file in the same directory
+                window.location.href = 'dashboard.html';
+            } else {
+                // Intentional bug: 'credentails' is misspelled
+                document.getElementById('error-message').textContent = 'Invalid credentails';
+            }
+        }
+    </script>
+</body>
+</html>
